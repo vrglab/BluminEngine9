@@ -1,5 +1,6 @@
 ﻿using BluminEngine9.BluminEngine.Utilities.AssetsManegment;
 using BluminEngine9.BluminEngine.Utilities.Debuging;
+using BluminEngine9.BluminEngine.Utilities.Mathmatics;
 using BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors;
 using OpenTK.Graphics.OpenGL;
 using System;
@@ -19,11 +20,12 @@ namespace BluminEngine9.BluminEngine.Rendering.Shading
     {
         int GetUniformLocation(string name);
         int GetUniformLocation(string name, string type, int arraypos);
-        void SetUniform(String name, int data);
-        void SetUniform(String name, float data);
-        void SetUniform(String name, bool data);
-        void SetUniform(String name, Vector3 data);
-        void SetUniform(String name, Vector2 data);
+        void SetUniform(string name, int data);
+        void SetUniform(string name, float data);
+        void SetUniform(string name, bool data);
+        void SetUniform(string name, Vector3 data);
+        void SetUniform(string name, Vector2 data);
+        void SetUniform(string name, Matrix data);
         void Run();
         void Stop();
     }
@@ -152,19 +154,31 @@ namespace BluminEngine9.BluminEngine.Rendering.Shading
             return Compile(id, data);
         }
 
+        public void Run()
+        {
+            GL.UseProgram(ProgramID);
+        }
+
+        public void Stop()
+        {
+            GL.UseProgram(0);
+        }
+
         public int GetUniformLocation(string name)
         {
-            throw new NotImplementedException();
+           return GL.GetUniformLocation(ProgramID, name);
         }
 
         public int GetUniformLocation(string name, string type, int arraypos)
         {
-            throw new NotImplementedException();
+            string n = name + "[" + arraypos + "]" + "." + type;
+            return GetUniformLocation(n);
         }
 
         public void SetUniform(string name, int data)
         {
-            throw new NotImplementedException();
+           
+            GL.Uniform1(GetUniformLocation(name), data);
         }
 
         public void SetUniform(string name, float data)
@@ -187,14 +201,9 @@ namespace BluminEngine9.BluminEngine.Rendering.Shading
             throw new NotImplementedException();
         }
 
-        public void Run()
+        public void SetUniform(string name, Matrix data)
         {
-            GL.UseProgram(ProgramID);
-        }
-
-        public void Stop()
-        {
-            GL.UseProgram(0);
+            GL.UniformMatrix4(GetUniformLocation(name), (Matrix.SIZE * Matrix.SIZE), true, data);
         }
     }
 }

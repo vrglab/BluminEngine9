@@ -19,8 +19,9 @@ namespace BluminEngine9.BluminEngine.Utilities.Buffering
             BufferID = GL.GenBuffer();
             Length = data.Length;   
             GL.BindBuffer(target, BufferID);
-            GL.BufferData<t>(Target, data.Length, data, usage);
-            
+            GL.BufferData<t>(Target, data.Length * sizeof(t), data, usage);
+            GL.BindBuffer(target, 0);
+
         }
 
         public override void Dispose()
@@ -37,8 +38,11 @@ namespace BluminEngine9.BluminEngine.Utilities.Buffering
         {
             BufferID = GL.GenVertexArray();
             Length = data.Length;
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, BufferID);
-            GL.BufferData(Target, data.Length, data, usage);
+            GL.BindVertexArray(BufferID);
+            GL.BindBuffer(Target, BufferID);
+            GL.BufferData(Target, data.Length * sizeof(t), data, usage);
+            GL.VertexAttribIPointer(0, 2, VertexAttribIntegerType.UnsignedInt, 0, IntPtr.Zero);
+            GL.BindBuffer(Target, 0);
         }
 
         public override void Dispose()
