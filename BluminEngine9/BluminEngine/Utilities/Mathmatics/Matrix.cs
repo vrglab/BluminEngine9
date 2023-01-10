@@ -1,6 +1,8 @@
 ﻿using BluminEngine9.BluminEngine.Objects.Componants;
 using BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors;
 using OpenTK.Mathematics;
+using Vector2 = BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors.Vector2;
+using Vector3 = BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors.Vector3;
 
 namespace BluminEngine9.BluminEngine.Utilities.Mathmatics
 {
@@ -210,6 +212,8 @@ namespace BluminEngine9.BluminEngine.Utilities.Mathmatics
             }
             return result;
         }
+
+
         public static implicit operator Matrix4(Matrix m1)
         {
             Matrix4 m4 = Matrix4.Identity;
@@ -230,5 +234,6 @@ namespace BluminEngine9.BluminEngine.Utilities.Mathmatics
             m.Set(3, 0, m1.Column3.X); m.Set(3, 1, m1.Column3.Y); m.Set(3, 2, m1.Column3.Z); m.Set(3, 3, m1.Column3.W);
             return m;
         }
+
     }
 }

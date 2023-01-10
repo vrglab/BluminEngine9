@@ -3,6 +3,7 @@ using BluminEngine9.BluminEngine.Utilities.Debuging;
 using BluminEngine9.BluminEngine.Utilities.Mathmatics;
 using BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors;
 using OpenTK.Graphics.OpenGL;
+using OpenTK.Mathematics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -203,7 +204,8 @@ namespace BluminEngine9.BluminEngine.Rendering.Shading
 
         public void SetUniform(string name, Matrix data)
         {
-            GL.UniformMatrix4(GetUniformLocation(name), (Matrix.SIZE * Matrix.SIZE), true, data);
+            Matrix4 mat = data; 
+            GL.UniformMatrix4(GetUniformLocation(name), true, ref mat);
         }
     }
 }
