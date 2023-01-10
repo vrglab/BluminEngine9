@@ -1,0 +1,40 @@
+@Vertex@
+in vec2 position;
+in vec4 incolor;
+
+uniform vec2 CenterPos;
+
+out vec2 textureCoords;
+out vec4 color;
+
+uniform mat4 transformationMatrix;
+
+void main(void){
+
+    gl_Position =  transformationMatrix   * vec4(position, 0.0, 1.0);
+    textureCoords = vec2((position.x+1.0)/2.0, 1 - (position.y+1.0)/2.0) + CenterPos;
+    color = incolor;
+}
+
+@Fragment@
+in vec2 textureCoords;
+in vec4 color;
+
+out vec4 outColor;
+
+uniform sampler2D guiTexture;
+
+void main(){
+    vec4 tex = vec4(texture(guiTexture, textureCoords).xyz, color.w);
+
+
+    if(color.w < 0.1 || texture(guiTexture, textureCoords).w < 0.1f) {
+        discard;
+    } else {
+        if(color == vec4(1,1,1,1)) {
+            outColor = texture(guiTexture, textureCoords);
+        } else{
+            outColor = tex * color;
+        }
+    }
+}

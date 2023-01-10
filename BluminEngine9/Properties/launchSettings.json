@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BluminEngine9": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

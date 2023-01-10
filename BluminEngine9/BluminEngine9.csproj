@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BulletSharp" Version="0.11.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="OpenTK" Version="4.7.5" />
+    <PackageReference Include="Salaros.ConfigParser" Version="0.3.8" />
+    <PackageReference Include="Silk.NET.Assimp" Version="2.16.0" />
+    <PackageReference Include="Silk.NET.Core" Version="2.16.0" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BluminEngine\Utilities\AssetsManegment\ArchiveSystem\" />
+  </ItemGroup>
+
+</Project>
