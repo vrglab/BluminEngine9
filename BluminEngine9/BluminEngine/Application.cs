@@ -22,7 +22,7 @@ namespace BluminEngine9
         public static string AppName { get; private set; }
         public static SceneMannager sceneMannager { get; private set; }
 
-        public unsafe static void StartEngine(Resolution res, string name, Scene srtartingScene)
+        public unsafe static void StartEngine(Resolution res, string name, WindowStyle style, Scene srtartingScene)
         {
             OnCloseEventCallback.addListner(() =>
             {
@@ -42,7 +42,7 @@ namespace BluminEngine9
                 Debug.Log("Deleting duplicate assets");
                 ResourceMannager.DeleteDuplicates();
 
-                Display display = new Display(res, name);
+                Display display = new Display(res, name, style);
 
                 init(display.window);
 

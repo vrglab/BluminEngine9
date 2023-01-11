@@ -8,12 +8,29 @@ namespace BluminEngine9.Rendering
     {
         
         public Window* window { get; private set; }
+        public WindowStyle Style { get; private set; }
 
         private OpenTK.Windowing.GraphicsLibraryFramework.Monitor* curentMonitor { get; set; }
 
-        public unsafe Display(Resolution res, string name)
+        public unsafe Display(Resolution res, string name, WindowStyle style)
         {
-            GLFW.DefaultWindowHints();
+            Style = style;
+
+            switch (style)
+            {
+                case WindowStyle.Normal:
+                        GLFW.DefaultWindowHints();
+                    break;
+                case WindowStyle.Locked:
+                        GLFW.WindowHint(WindowHintBool.Resizable, false);
+                    break;
+                case WindowStyle.Fullscreen:
+                        GLFW.WindowHint(WindowHintBool.Resizable, false);
+                        GLFW.WindowHint(WindowHintBool.Maximized, true);
+                        GLFW.WindowHint(WindowHintBool.Decorated, false);
+                    break;
+            }
+            
             window = GLFW.CreateWindow(res.Width, res.Heigth, name, curentMonitor, window);
             GLFW.MakeContextCurrent(window);
             GLFW.FocusWindow(window);
@@ -30,5 +47,12 @@ namespace BluminEngine9.Rendering
             Width = width;
             Heigth = heigth;
         }
+    }
+
+    public enum WindowStyle
+    {
+        Normal,
+        Locked,
+        Fullscreen
     }
 }
