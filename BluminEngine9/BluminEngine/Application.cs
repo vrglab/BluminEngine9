@@ -39,9 +39,9 @@ namespace BluminEngine9.BluminEngine
 
                 Debug.Log("Loading Assets");
                 ResourceMannager.LoadAllDataFromAssetsPath();
-                Debug.Log("Deleting Duplicate Assets");
+                Debug.Log("Deleting duplicate assets");
                 ResourceMannager.DeleteDuplicates();
-               
+
                 Display display = new Display(res, name);
 
                 init(display.window);
@@ -51,8 +51,9 @@ namespace BluminEngine9.BluminEngine
 
                 sceneMannager = new SceneMannager(srtartingScene);
 
-                GL.ClearColor(System.Drawing.Color.DarkCyan);
+
                 GC.Collect();
+                GL.ClearColor(System.Drawing.Color.DarkCyan);
                 while (!GLFW.WindowShouldClose(display.window))
                 {
                     sceneMannager.CurentScene.UpdateEventCallback.Invoke();
@@ -68,26 +69,20 @@ namespace BluminEngine9.BluminEngine
                 GC.Collect();
                 Debug.LogException(e);
                 OnCloseEventCallback.Invoke();
-            }   
+            }
         }
 
 
         private static void InitializeGlBindings()
         {
-            // We don't put a hard dependency on OpenTK.Graphics here.
-            // So we need to use reflection to initialize the GL bindings, so users don't have to.
-
-            // Try to load OpenTK.Graphics assembly.
             Assembly assembly;
             try
             {
                 assembly = Assembly.Load("OpenTK.Graphics");
             }
-            catch
+            catch (Exception e)
             {
-                // Failed to load graphics, oh well.
-                // Up to the user I guess?
-                // TODO: Should we expose this load failure to the user better?
+                Debug.LogException(e);
                 return;
             }
 
@@ -121,9 +116,9 @@ namespace BluminEngine9.BluminEngine
             InitializeGlBindings();
 
             GL.Enable(EnableCap.DepthTest);
-            /*GL.Enable(EnableCap.ScissorTest);
+            GL.Enable(EnableCap.ScissorTest);
             GL.Enable(EnableCap.Blend);
-            GL.Enable(EnableCap.TextureCubeMapSeamless);*/
+            GL.Enable(EnableCap.TextureCubeMapSeamless);
         }
     }
 }

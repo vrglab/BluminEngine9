@@ -17,7 +17,7 @@ using Vector3 = BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors.Vector3;
 
 namespace BluminEngine9.BluminEngine.Rendering.Shading
 {
-    public interface IShader
+    public interface IShader : IDisposable
     {
         int GetUniformLocation(string name);
         int GetUniformLocation(string name, string type, int arraypos);
@@ -167,7 +167,7 @@ namespace BluminEngine9.BluminEngine.Rendering.Shading
 
         public int GetUniformLocation(string name)
         {
-           return GL.GetUniformLocation(ProgramID, name);
+            return GL.GetUniformLocation(ProgramID, name);
         }
 
         public int GetUniformLocation(string name, string type, int arraypos)
@@ -178,34 +178,41 @@ namespace BluminEngine9.BluminEngine.Rendering.Shading
 
         public void SetUniform(string name, int data)
         {
-           
+
             GL.Uniform1(GetUniformLocation(name), data);
         }
 
         public void SetUniform(string name, float data)
         {
-            throw new NotImplementedException();
+            GL.Uniform1(GetUniformLocation(name), data);
         }
 
         public void SetUniform(string name, bool data)
         {
-            throw new NotImplementedException();
+            GL.Uniform1(GetUniformLocation(name), data ? 0 : 1);
         }
 
         public void SetUniform(string name, Vector3 data)
         {
-            throw new NotImplementedException();
+            GL.Uniform3(GetUniformLocation(name), data.x, data.y, data.z);
         }
 
         public void SetUniform(string name, Vector2 data)
         {
-            throw new NotImplementedException();
+            GL.Uniform2(GetUniformLocation(name), data.x, data.y);
         }
 
         public void SetUniform(string name, Matrix data)
         {
-            Matrix4 mat = data; 
+            Matrix4 mat = data;
             GL.UniformMatrix4(GetUniformLocation(name), true, ref mat);
+        }
+
+        public void Dispose()
+        {
+            GL.DeleteShader(VertexShader);
+            GL.DeleteShader(Fragmentshader);
+            GL.DeleteProgram(ProgramID);
         }
     }
 }

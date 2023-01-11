@@ -27,9 +27,19 @@ namespace BluminEngine9.BluminEngine.Utilities.AssetsManegment
             {
                 foreach (var v2 in LoadedFiles)
                 {
-                    if (v1.Value.Bytes.Equals(v2.Value.Bytes) && !v1.Value.Name.Equals(v2.Value.Name))
+                    if (v1.Value.Bytes.SequenceEqual(v2.Value.Bytes))
                     {
-                        delete.Add(v2.Key);
+                        if (!delete.Contains(v1.Key) || !delete.Contains(v2.Key))
+                        {
+                            if (!v1.Value.Name.Equals(v2.Value.Name))
+                            {
+                                if (!delete.Contains(v2.Key))
+                                {
+                                    delete.Add(v2.Key);
+                                    delete.Remove(v1.Key);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -74,7 +84,7 @@ namespace BluminEngine9.BluminEngine.Utilities.AssetsManegment
         private static FileData Loadfile(string file)
         {
             FileInfo fi = new FileInfo(file);
-            if(!fileIds.ContainsKey(fi.FullName))
+            if (!fileIds.ContainsKey(fi.FullName))
             {
                 Guid instanceId = Guid.NewGuid();
                 byte[] bytes = File.ReadAllBytes(fi.FullName);
@@ -158,10 +168,10 @@ namespace BluminEngine9.BluminEngine.Utilities.AssetsManegment
         public string Name { get; }
         public string DirectoryPath { get; }
         public string Fullpath { get; }
-        public byte[]? Bytes { get; }
+        public byte[] Bytes { get; }
         public Guid InstanceId { get; }
 
-        public FileData(string extention, string name, string directoryPath, string fullpath, byte[] bytes,Guid instanceId)
+        public FileData(string extention, string name, string directoryPath, string fullpath, byte[] bytes, Guid instanceId)
         {
             Extention = extention;
             Name = name;
