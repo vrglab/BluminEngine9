@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors
+namespace BluminEngine9.Utilities.Mathmatics.Vectors
 {
     public struct Vector3 : IEquatable<Vector3>
     {

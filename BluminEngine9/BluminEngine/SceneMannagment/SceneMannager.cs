@@ -1,12 +1,12 @@
-﻿using BluminEngine9.BluminEngine.Objects;
-using BluminEngine9.BluminEngine.Utilities.EventSystem;
+﻿using BluminEngine9.Objects;
+using BluminEngine9.Utilities.EventSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BluminEngine9.BluminEngine.SceneMannagment
+namespace BluminEngine9.SceneMannagment
 {
     public class SceneMannager
     {

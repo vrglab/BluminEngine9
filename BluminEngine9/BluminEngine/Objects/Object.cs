@@ -1,7 +1,7 @@
-﻿using BluminEngine9.BluminEngine;
+﻿using BluminEngine9;
 using System.Xml.Linq;
 
-namespace BluminEngine9.BluminEngine.Objects
+namespace BluminEngine9.Objects
 {
     public abstract class Object : Instancable, IEquatable<Object>
     {

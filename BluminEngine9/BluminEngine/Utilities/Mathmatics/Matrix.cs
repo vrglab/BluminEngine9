@@ -1,10 +1,11 @@
-﻿using BluminEngine9.BluminEngine.Objects.Componants;
-using BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors;
+﻿using BluminEngine9.Objects.Componants;
+using BluminEngine9.Utilities.Mathmatics.Vectors;
+using BluminEngine9.Objects.Componants;
 using OpenTK.Mathematics;
-using Vector2 = BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors.Vector2;
-using Vector3 = BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors.Vector3;
+using Vector2 = BluminEngine9.Utilities.Mathmatics.Vectors.Vector2;
+using Vector3 = BluminEngine9.Utilities.Mathmatics.Vectors.Vector3;
 
-namespace BluminEngine9.BluminEngine.Utilities.Mathmatics
+namespace BluminEngine9.Utilities.Mathmatics
 {
     public class Matrix
     {

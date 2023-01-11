@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BluminEngine9.BluminEngine.Utilities.Mathmatics
+namespace BluminEngine9.Utilities.Mathmatics
 {
     public static class Mathf
     {

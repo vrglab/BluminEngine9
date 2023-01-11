@@ -1,7 +1,7 @@
-﻿using BluminEngine9.BluminEngine.Utilities.AssetsManegment;
-using BluminEngine9.BluminEngine.Utilities.Debuging;
-using BluminEngine9.BluminEngine.Utilities.Mathmatics;
-using BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors;
+﻿using BluminEngine9.Utilities.AssetsManegment;
+using BluminEngine9.Utilities.Debuging;
+using BluminEngine9.Utilities.Mathmatics;
+using BluminEngine9.Utilities.Mathmatics.Vectors;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 using System;
@@ -12,10 +12,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using Vector2 = BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors.Vector2;
-using Vector3 = BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors.Vector3;
+using Vector2 = BluminEngine9.Utilities.Mathmatics.Vectors.Vector2;
+using Vector3 = BluminEngine9.Utilities.Mathmatics.Vectors.Vector3;
 
-namespace BluminEngine9.BluminEngine.Rendering.Shading
+namespace BluminEngine9.Rendering.Shading
 {
     public interface IShader : IDisposable
     {

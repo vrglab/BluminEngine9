@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BluminEngine9.BluminEngine.Utilities.Debuging
+namespace BluminEngine9.Utilities.Debuging
 {
     public static class Debug
     {

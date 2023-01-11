@@ -1,16 +1,16 @@
-﻿using BluminEngine9.BluminEngine.Rendering;
-using BluminEngine9.BluminEngine.SceneMannagment;
-using BluminEngine9.BluminEngine.Utilities;
-using BluminEngine9.BluminEngine.Utilities.AssetsManegment;
-using BluminEngine9.BluminEngine.Utilities.Debuging;
-using BluminEngine9.BluminEngine.Utilities.EventSystem;
+﻿using BluminEngine9.Rendering;
+using BluminEngine9.SceneMannagment;
+using BluminEngine9.Utilities;
+using BluminEngine9.Utilities.AssetsManegment;
+using BluminEngine9.Utilities.Debuging;
+using BluminEngine9.Utilities.EventSystem;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using System.Reflection;
 
-namespace BluminEngine9.BluminEngine
+namespace BluminEngine9
 {
     public class Application
     {

@@ -1,7 +1,7 @@
-﻿using BluminEngine9.BluminEngine.Objects;
-using Object = BluminEngine9.BluminEngine.Objects.Object;
+﻿using BluminEngine9.Objects;
+using Object = BluminEngine9.Objects.Object;
 
-namespace BluminEngine9.BluminEngine.Utilities.EventSystem
+namespace BluminEngine9.Utilities.EventSystem
 {
     public class BluminEvent
     {

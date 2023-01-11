@@ -1,4 +1,4 @@
-﻿using BluminEngine9.BluminEngine.Utilities.Debuging;
+﻿using BluminEngine9.Utilities.Debuging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenTK.Graphics.OpenGL;
 
-namespace BluminEngine9.BluminEngine.Utilities.Buffering
+namespace BluminEngine9.Utilities.Buffering
 {
     public unsafe class ObjectBuffer<t> : Buffer where t : unmanaged
     {

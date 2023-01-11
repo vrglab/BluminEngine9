@@ -1,11 +1,11 @@
-﻿using BluminEngine9.BluminEngine.Utilities.EventSystem;
+﻿using BluminEngine9.Utilities.EventSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BluminEngine9.BluminEngine.Objects
+namespace BluminEngine9.Objects
 {
     public abstract class Componant : Object, IEngineActor
     {

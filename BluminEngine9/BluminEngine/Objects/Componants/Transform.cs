@@ -1,12 +1,12 @@
-﻿using BluminEngine9.BluminEngine.Utilities.Debuging;
-using BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors;
+﻿using BluminEngine9.Utilities.Debuging;
+using BluminEngine9.Utilities.Mathmatics.Vectors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BluminEngine9.BluminEngine.Objects.Componants
+namespace BluminEngine9.Objects.Componants
 {
     public class Transform : Componant
     {

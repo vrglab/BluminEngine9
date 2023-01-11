@@ -1,11 +1,11 @@
-﻿using BluminEngine9.BluminEngine.Rendering.Shading;
-using BluminEngine9.BluminEngine.Utilities.AssetsManegment.Types;
-using BluminEngine9.BluminEngine.Utilities.Buffering;
-using BluminEngine9.BluminEngine.Utilities.Mathmatics;
-using BluminEngine9.BluminEngine.Utilities.Mathmatics.Vectors;
+﻿using BluminEngine9.Rendering.Shading;
+using BluminEngine9.Utilities.AssetsManegment.Types;
+using BluminEngine9.Utilities.Buffering;
+using BluminEngine9.Utilities.Mathmatics;
+using BluminEngine9.Utilities.Mathmatics.Vectors;
 using OpenTK.Graphics.OpenGL;
 
-namespace BluminEngine9.BluminEngine.Objects.Componants
+namespace BluminEngine9.Objects.Componants
 {
     public unsafe class ImageRenderer : Componant
     {

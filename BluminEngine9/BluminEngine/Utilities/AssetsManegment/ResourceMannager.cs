@@ -1,10 +1,10 @@
-﻿using BluminEngine9.BluminEngine.Rendering.Shading;
-using BluminEngine9.BluminEngine.Utilities.AssetsManegment.Types;
-using BluminEngine9.BluminEngine.Utilities.EventSystem;
+﻿using BluminEngine9.Rendering.Shading;
+using BluminEngine9.Utilities.AssetsManegment.Types;
+using BluminEngine9.Utilities.EventSystem;
 using System;
 using System.IO;
 
-namespace BluminEngine9.BluminEngine.Utilities.AssetsManegment
+namespace BluminEngine9.Utilities.AssetsManegment
 {
     public class ResourceMannager
     {

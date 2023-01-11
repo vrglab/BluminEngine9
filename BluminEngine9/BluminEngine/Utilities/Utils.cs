@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BluminEngine9.BluminEngine.Utilities
+namespace BluminEngine9.Utilities
 {
     public class Utils
     {

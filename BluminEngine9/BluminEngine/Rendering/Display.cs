@@ -2,7 +2,7 @@
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using System.Text.Json.Serialization;
 
-namespace BluminEngine9.BluminEngine.Rendering
+namespace BluminEngine9.Rendering
 {
     public unsafe class Display
     {
