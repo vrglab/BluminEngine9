@@ -10,6 +10,6 @@ internal class main
 {
     public static void Main(string[] args)
     {
-        Application.StartEngine(new Resolution(1234, 1234), "Testing windows", WindowStyle.Fullscreen, new test_Scene());
+        Application.StartEngine(new Resolution(1234, 1234), "Testing windows", WindowStyle.Normal, new test_Scene());
     }
 }
