@@ -63,7 +63,6 @@ C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\OpenTK.Windowing.Common.dll
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\OpenTK.Windowing.Desktop.dll
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\OpenTK.Windowing.GraphicsLibraryFramework.dll
-C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\ConfigParser.dll
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Silk.NET.Assimp.dll
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Silk.NET.Core.dll
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Silk.NET.Maths.dll
@@ -90,3 +89,5 @@ C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\obj\Debug\net6.0\
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\obj\Debug\net6.0\BluminEngine9.pdb
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\obj\Debug\net6.0\BluminEngine9.genruntimeconfig.cache
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\obj\Debug\net6.0\ref\BluminEngine9.dll
+C:\Users\a.bozorgmehr\Source\Repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Google.Api.CommonProtos.dll
+C:\Users\a.bozorgmehr\Source\Repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Google.Protobuf.dll

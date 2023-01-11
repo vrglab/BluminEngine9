@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[0.11.1, )"
             },
+            "Google.Api.CommonProtos": {
+              "target": "Package",
+              "version": "[2.7.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
@@ -51,10 +55,6 @@
             "OpenTK": {
               "target": "Package",
               "version": "[4.7.5, )"
-            },
-            "Salaros.ConfigParser": {
-              "target": "Package",
-              "version": "[0.3.8, )"
             },
             "Silk.NET.Assimp": {
               "target": "Package",

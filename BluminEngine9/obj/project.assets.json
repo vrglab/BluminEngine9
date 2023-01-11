@@ -14,6 +14,35 @@
           "build/net40-client/BulletSharp.targets": {}
         }
       },
+      "Google.Api.CommonProtos/2.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "[3.21.0, 4.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Api.CommonProtos.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.CommonProtos.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Google.Protobuf/3.21.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
@@ -278,18 +307,6 @@
           }
         }
       },
-      "Salaros.ConfigParser/0.3.8": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/ConfigParser.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/ConfigParser.dll": {}
-        }
-      },
       "Silk.NET.Assimp/2.16.0": {
         "type": "package",
         "dependencies": {
@@ -501,6 +518,48 @@
         "bulletsharp.0.11.1.nupkg.sha512",
         "bulletsharp.nuspec",
         "lib/net40-client/BulletSharp.dll"
+      ]
+    },
+    "Google.Api.CommonProtos/2.7.0": {
+      "sha512": "Wpg4yRGJxX8FE3Ife+Gsj556MDHuki4KqVlZ1jOvvFX6yianI/hbScgvGUlteM9uu7vzbfCyKLc0Sv5/53M3hg==",
+      "type": "package",
+      "path": "google.api.commonprotos/2.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.api.commonprotos.2.7.0.nupkg.sha512",
+        "google.api.commonprotos.nuspec",
+        "lib/net461/Google.Api.CommonProtos.dll",
+        "lib/net461/Google.Api.CommonProtos.pdb",
+        "lib/net461/Google.Api.CommonProtos.xml",
+        "lib/netstandard2.0/Google.Api.CommonProtos.dll",
+        "lib/netstandard2.0/Google.Api.CommonProtos.pdb",
+        "lib/netstandard2.0/Google.Api.CommonProtos.xml"
+      ]
+    },
+    "Google.Protobuf/3.21.0": {
+      "sha512": "LKtDRauLeBFzwhK7JKpzvyNCvIxYRPX9mHjeuTj3gtG9F6JnSVqF1X2h+UZnQB47Ihi4+EipvbU1fEG7XNa30A==",
+      "type": "package",
+      "path": "google.protobuf/3.21.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.protobuf.3.21.0.nupkg.sha512",
+        "google.protobuf.nuspec",
+        "lib/net45/Google.Protobuf.dll",
+        "lib/net45/Google.Protobuf.pdb",
+        "lib/net45/Google.Protobuf.xml",
+        "lib/net5.0/Google.Protobuf.dll",
+        "lib/net5.0/Google.Protobuf.pdb",
+        "lib/net5.0/Google.Protobuf.xml",
+        "lib/netstandard1.1/Google.Protobuf.dll",
+        "lib/netstandard1.1/Google.Protobuf.pdb",
+        "lib/netstandard1.1/Google.Protobuf.xml",
+        "lib/netstandard2.0/Google.Protobuf.dll",
+        "lib/netstandard2.0/Google.Protobuf.pdb",
+        "lib/netstandard2.0/Google.Protobuf.xml"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -837,20 +896,6 @@
         "opentk.windowing.graphicslibraryframework.nuspec"
       ]
     },
-    "Salaros.ConfigParser/0.3.8": {
-      "sha512": "qsbqqAfUWrn9bSqvwrNMB2hAJOLo4rYgetzmX5CM880kdOva+AGIeumOWrAEI11wghlgX0rnpmQGH2n9Nv6I2w==",
-      "type": "package",
-      "path": "salaros.configparser/0.3.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/ConfigParser.dll",
-        "lib/net45/ConfigParser.dll",
-        "lib/netstandard2.0/ConfigParser.dll",
-        "salaros.configparser.0.3.8.nupkg.sha512",
-        "salaros.configparser.nuspec"
-      ]
-    },
     "Silk.NET.Assimp/2.16.0": {
       "sha512": "IEblcEWbe0Ri3qvn0MirEe3r37w+fYviZkBIzpTfXHT8aWYTNVXoL1LiIdPIDx7TqklOqcnXQkEQWR4VYq0a7A==",
       "type": "package",
@@ -1184,9 +1229,9 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "BulletSharp >= 0.11.1",
+      "Google.Api.CommonProtos >= 2.7.0",
       "Newtonsoft.Json >= 13.0.2",
       "OpenTK >= 4.7.5",
-      "Salaros.ConfigParser >= 0.3.8",
       "Silk.NET.Assimp >= 2.16.0",
       "Silk.NET.Core >= 2.16.0",
       "System.Drawing.Common >= 7.0.0"
@@ -1235,6 +1280,10 @@
             "target": "Package",
             "version": "[0.11.1, )"
           },
+          "Google.Api.CommonProtos": {
+            "target": "Package",
+            "version": "[2.7.0, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.2, )"
@@ -1242,10 +1291,6 @@
           "OpenTK": {
             "target": "Package",
             "version": "[4.7.5, )"
-          },
-          "Salaros.ConfigParser": {
-            "target": "Package",
-            "version": "[0.3.8, )"
           },
           "Silk.NET.Assimp": {
             "target": "Package",

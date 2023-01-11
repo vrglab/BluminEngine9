@@ -1,6 +1,9 @@
 ﻿
+using Google.Api;
+using OpenTK.Core.Exceptions;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using System.Text.Json.Serialization;
+
 
 namespace BluminEngine9.Rendering
 {
@@ -41,6 +44,8 @@ namespace BluminEngine9.Rendering
     {
         public int Width { get; private set; }
         public int Heigth { get; private set; }
+
+        public static Resolution DefaultDisplayResolution { get => new Resolution(1920,1080 );}
 
         public Resolution(int width, int heigth)
         {
