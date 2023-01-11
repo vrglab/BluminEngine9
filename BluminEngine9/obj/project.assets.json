@@ -1198,9 +1198,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\a.bozorgmehr\\source\\repos\\BluminEngine9\\BluminEngine9\\BluminEngine9.csproj",
+      "projectUniqueName": "C:\\Users\\a.bozorgmehr\\Source\\Repos\\BluminEngine9\\BluminEngine9\\BluminEngine9.csproj",
       "projectName": "BluminEngine9",
-      "projectPath": "C:\\Users\\a.bozorgmehr\\source\\repos\\BluminEngine9\\BluminEngine9\\BluminEngine9.csproj",
+      "projectPath": "C:\\Users\\a.bozorgmehr\\Source\\Repos\\BluminEngine9\\BluminEngine9\\BluminEngine9.csproj",
       "packagesPath": "C:\\Users\\a.bozorgmehr\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\a.bozorgmehr\\Source\\Repos\\BluminEngine9\\BluminEngine9\\obj\\",
       "projectStyle": "PackageReference",
@@ -1276,7 +1276,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   },
