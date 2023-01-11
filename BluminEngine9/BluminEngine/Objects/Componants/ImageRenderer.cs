@@ -1,6 +1,7 @@
 ﻿using BluminEngine9.Rendering.Shading;
 using BluminEngine9.Utilities.AssetsManegment.Types;
 using BluminEngine9.Utilities.Buffering;
+using BluminEngine9.Utilities.Debuging;
 using BluminEngine9.Utilities.Mathmatics;
 using BluminEngine9.Utilities.Mathmatics.Vectors;
 using OpenTK.Graphics.OpenGL;
@@ -46,15 +47,18 @@ namespace BluminEngine9.Objects.Componants
                 new Vector2(1f, 1f) ,
                 new Vector2(1f, -1f) };
 
-            int[] positionData = new int[arrayData.Length * 3];
+            int[] positionData = new int[arrayData.Length * 2];
 
             for (int i = 0; i < arrayData.Length; ++i)
             {
-                positionData[i * 3] = (int)arrayData[i].x;
-                positionData[i * 3 + 1] = (int)arrayData[i].y;
+                positionData[i * 2] = (int)arrayData[i].x;
+                positionData[i * 2 + 1] = (int)arrayData[i].y;
             }
 
             ObjectBuffer = new VertexArrayBuffer<int>(positionData, BufferTarget.ArrayBuffer, BufferUsageHint.StreamDraw);
+
+            Debug.LogBuffer("Vertex array", ObjectBuffer);
+        
         }
 
         public override void Update()

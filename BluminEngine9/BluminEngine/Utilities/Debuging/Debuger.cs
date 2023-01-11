@@ -1,4 +1,4 @@
-﻿
+﻿using OpenTK.Graphics.OpenGL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,39 +11,39 @@ namespace BluminEngine9.Utilities.Debuging
     {
         static string time { get => $"{DateTime.UtcNow.Day}/{DateTime.UtcNow.Month}/{DateTime.UtcNow.Year} {DateTime.UtcNow.Hour}:{DateTime.UtcNow.Minute}:{DateTime.UtcNow.Second}:{DateTime.UtcNow.Millisecond}"; }
         static List<string> enteries = new List<string>();
-        public static void Log(object? data)
+        private static void Log(string prefix, object? data, ConsoleColor color = ConsoleColor.White)
         {
-            Console.ForegroundColor = ConsoleColor.White;
-            string logText = $"[SYSTEM {time}]: " + data;
+            Console.ForegroundColor = color;
+            string logText = $"[{prefix.ToUpper()} {time}]: " + data;
             Console.WriteLine(logText);
             enteries.Add(logText);
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+
+        public static void Log(object? data)
+        {
+            Log("system", data);
         }
 
         public static void LogWarning(object? data)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            string logText = $"[WARNING {time}]: " + data;
-            Console.WriteLine(logText);
-            enteries.Add(logText);
-            Console.ForegroundColor = ConsoleColor.White;
+            Log("warning", data, ConsoleColor.Yellow);
         }
 
         public static void LogError(object? data)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            string logText = $"[ERROR {time}]: " + data;
-            Console.WriteLine(logText);
-            enteries.Add(logText);
-            Console.ForegroundColor = ConsoleColor.White;
+            Log("error", data, ConsoleColor.Red);
         }
 
         public static void LogException(Exception data)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            string logText = $"[EXCEPTION {time}]: " + data.Message + Environment.NewLine+data.StackTrace;
-            Console.WriteLine(logText);
-            enteries.Add(logText);
-            Console.ForegroundColor = ConsoleColor.White;
+            Log("exception", data, ConsoleColor.Red);
+        }
+
+        public static void LogBuffer(string buffername,BluminEngine9.Utilities.Buffering.Buffer buffer)
+        {
+           Log(buffername, $"Is buffer_{buffer.BufferID}: " + GL.IsBuffer(buffer.BufferID) + ", Buffer data length: " + buffer.Length);
         }
 
         public static void OnClose()
