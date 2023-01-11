@@ -10,9 +10,9 @@ namespace BluminEngine9.Utilities.Mathmatics.Vectors
 {
     public struct Vector3 : IEquatable<Vector3>
     {
-        public float x { get => X; }
-        public float y { get => Y; }
-        public float z { get => Z; }
+        public float x { get => X; set => X = value; }
+        public float y { get => Y; set => Y = value; }
+        public float z { get => Z; set => Z = value; }
 
         private float X, Y, Z;
 
@@ -249,8 +249,8 @@ namespace BluminEngine9.Utilities.Mathmatics.Vectors
 
     public struct Vector2 : IEquatable<Vector2>
     {
-        public float x { get => X; }
-        public float y { get => Y; }
+        public float x { get => X; set => X = value; }
+        public float y { get => Y; set => Y = value; }
 
         private float X = 0, Y = 0;
 

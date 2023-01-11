@@ -26,6 +26,6 @@ public class testGameobject : GameObject
 
     public override void Update()
     {
-
+        transform.Position.x += 1;
     }
 }
