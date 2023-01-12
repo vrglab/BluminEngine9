@@ -249,8 +249,8 @@ namespace BluminEngine9.Utilities.Mathmatics.Vectors
 
     public struct Vector2 : IEquatable<Vector2>
     {
-        public float x { get => X; set => X = value; }
-        public float y { get => Y; set => Y = value; }
+        public float x { get => X; }
+        public float y { get => Y;}
 
         private float X = 0, Y = 0;
 

@@ -2,6 +2,7 @@
 using BluminEngine9.Objects.Componants;
 using BluminEngine9.Utilities.AssetsManegment;
 using BluminEngine9.Utilities.Debuging;
+using BluminEngine9.Utilities.Mathmatics.Vectors;
 using Microsoft.Extensions.DependencyModel;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,6 @@ public class testGameobject : GameObject
 
     public override void Update()
     {
-        transform.Position.x += 1;
+        transform.Position = new Vector3(transform.Position.x - 0.5f, transform.Position.y, transform.Position.z);
     }
 }

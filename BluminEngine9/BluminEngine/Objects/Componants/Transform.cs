@@ -1,18 +1,12 @@
-﻿using BluminEngine9.Utilities.Debuging;
-using BluminEngine9.Utilities.Mathmatics.Vectors;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BluminEngine9.Utilities.Mathmatics.Vectors;
 
 namespace BluminEngine9.Objects.Componants
 {
     public class Transform : Componant
     {
-        public Vector3 Position { get; private set; }
-        public Vector3 Rotation { get; private set; }
-        public Vector3 Scale { get; private set; }
+        public Vector3 Position { get; set; }
+        public Vector3 Rotation { get; set; }
+        public Vector3 Scale { get; set; }
 
         public override void Awake()
         {
