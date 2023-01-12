@@ -12,12 +12,14 @@ namespace BluminEngine9.Rendering
         
         public Window* window { get; private set; }
         public WindowStyle Style { get; private set; }
+        public Resolution currentResolution { get; private set; }
 
         private OpenTK.Windowing.GraphicsLibraryFramework.Monitor* curentMonitor { get; set; }
 
         public unsafe Display(Resolution res, string name, WindowStyle style)
         {
             Style = style;
+            currentResolution = res;
 
             switch (style)
             {

@@ -45,6 +45,7 @@ namespace BluminEngine9
                 Display display = new Display(res, name, style);
 
                 init(display.window);
+                GL.Viewport(0, 0, display.currentResolution.Width, display.currentResolution.Heigth);
 
                 Debug.Log("Batching Assets");
                 ResourceMannager.BatchLoadedFiles();
