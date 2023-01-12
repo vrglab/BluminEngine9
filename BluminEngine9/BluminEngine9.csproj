@@ -22,4 +22,8 @@
     <Folder Include="BluminEngine\Utilities\AssetsManegment\ArchiveSystem\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
 </Project>

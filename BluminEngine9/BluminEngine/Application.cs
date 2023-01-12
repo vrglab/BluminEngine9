@@ -52,7 +52,6 @@ namespace BluminEngine9
 
                 sceneMannager = new SceneMannager(srtartingScene);
 
-
                 GC.Collect();
                 GL.ClearColor(System.Drawing.Color.DarkCyan);
                 while (!GLFW.WindowShouldClose(display.window))

@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluminEngine9", "BluminEngine9\BluminEngine9.csproj", "{36C175C9-B3D1-4F99-9F96-E54F42E550D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluminEngine9", "BluminEngine9\BluminEngine9.csproj", "{36C175C9-B3D1-4F99-9F96-E54F42E550D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{23466EFA-F0FA-4CC7-94BF-5ABE1CBD8E00}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
