@@ -17,7 +17,7 @@ namespace BluminEngine9
         static RenderMannager rm = new RenderMannager();
 
         public static BluminGlobalEvent OnCloseEventCallback { get; } = new BluminGlobalEvent();
-
+        public static Display display { get; private set; }
 
         public static string AppName { get; private set; }
         public static SceneMannager sceneMannager { get; private set; }
@@ -42,7 +42,7 @@ namespace BluminEngine9
                 Debug.Log("Deleting duplicate assets");
                 ResourceMannager.DeleteDuplicates();
 
-                Display display = new Display(res, name, style);
+                display = new Display(res, name, style);
 
                 init(display.window);
                 GL.Viewport(0, 0, display.currentResolution.Width, display.currentResolution.Heigth);

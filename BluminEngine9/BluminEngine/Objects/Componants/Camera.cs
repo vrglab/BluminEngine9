@@ -1,4 +1,5 @@
 ﻿using BluminEngine9.Objects;
+using BluminEngine9.Rendering;
 using BluminEngine9.Utilities.Mathmatics;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,7 @@ namespace BluminEngine9.BluminEngine.Objects.Componants
 
         public override void Update()
         {
-            ProjectionMatrix = Matrix.projection(FOV,0,FarPlane, NearPlane);
+            ProjectionMatrix = Matrix.projection(FOV,(Application.display.currentResolution.Width/ Application.display.currentResolution.Heigth) + 0.7f,FarPlane, NearPlane);
             OrthoMatrix = Matrix.OrthoMatrix(-1, 1, -1, 1, FarPlane, NearPlane);
             ViewMatrix = Matrix.view(gameobject.transform.Position, gameobject.transform.Rotation);
         }
