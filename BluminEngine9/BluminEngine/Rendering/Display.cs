@@ -12,7 +12,7 @@ namespace BluminEngine9.Rendering
         
         public Window* window { get; private set; }
         public WindowStyle Style { get; private set; }
-        public Resolution currentResolution { get; private set; }
+        public Resolution currentResolution { get; set; }
 
         private OpenTK.Windowing.GraphicsLibraryFramework.Monitor* curentMonitor { get; set; }
 
