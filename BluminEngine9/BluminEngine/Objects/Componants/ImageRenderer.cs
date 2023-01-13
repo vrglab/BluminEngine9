@@ -45,7 +45,8 @@ namespace BluminEngine9.Objects.Componants
                 new Vector2(-1f, 1f),
                 new Vector2(-1f, -1f) ,
                 new Vector2(1f, 1f) ,
-                new Vector2(1f, -1f) };
+                new Vector2(1f, -1f) 
+            };
 
             int[] positionData = new int[arrayData.Length * 2];
 
@@ -58,7 +59,6 @@ namespace BluminEngine9.Objects.Componants
             ObjectBuffer = new VertexArrayBuffer<int>(positionData, BufferTarget.ArrayBuffer, BufferUsageHint.StreamDraw);
 
             Debug.LogBuffer("Vertex array", ObjectBuffer);
-        
         }
 
         public override void Update()
