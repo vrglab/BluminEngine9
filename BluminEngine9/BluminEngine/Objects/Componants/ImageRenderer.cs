@@ -56,7 +56,7 @@ namespace BluminEngine9.Objects.Componants
                 positionData[i * 2 + 1] = (int)arrayData[i].y;
             }
 
-            ObjectBuffer = new VertexArrayBuffer<int>(positionData, BufferTarget.ArrayBuffer, BufferUsageHint.StreamDraw);
+            ObjectBuffer = new VertexArrayBuffer<int>(positionData, BufferTarget.ArrayBuffer, BufferUsageHint.StaticDraw);
 
             Debug.LogBuffer("Vertex array", ObjectBuffer);
         }
