@@ -41,7 +41,7 @@ namespace BluminEngine9.Utilities.Buffering
             GL.BindVertexArray(BufferID);
             GL.BindBuffer(Target, BufferID);
             GL.BufferData(Target, data.Length * sizeof(t), data, usage);
-            GL.VertexAttribIPointer(0, 2, VertexAttribIntegerType.UnsignedInt, 0, IntPtr.Zero);
+            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 3*sizeof(float),0);
             GL.BindBuffer(Target, 0);
         }
 

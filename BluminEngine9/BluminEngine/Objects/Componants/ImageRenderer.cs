@@ -36,7 +36,7 @@ namespace BluminEngine9.Objects.Componants
             shader.SetUniform("transformationMatrix", Matrix.transform(gameobject.transform));
 
             GL.BindVertexArray(ObjectBuffer.BufferID);
-            GL.DrawArrays(PrimitiveType.TriangleStrip, 0, ObjectBuffer.Length);
+            GL.DrawArrays(PrimitiveType.TriangleStrip, 0, 3);
         }
 
         public override void Start()

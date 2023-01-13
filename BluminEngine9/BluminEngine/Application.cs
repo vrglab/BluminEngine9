@@ -56,6 +56,7 @@ namespace BluminEngine9
                 GL.ClearColor(System.Drawing.Color.DarkCyan);
                 while (!GLFW.WindowShouldClose(display.window))
                 {
+                    GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
                     sceneMannager.CurentScene.UpdateEventCallback.Invoke();
                     rm.Render();
                     GLFW.SwapBuffers(display.window);
