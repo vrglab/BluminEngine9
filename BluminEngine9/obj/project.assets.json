@@ -1238,24 +1238,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arad8\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\a.bozorgmehr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual studio 2022 projects\\BluminEngine9\\BluminEngine9\\BluminEngine9.csproj",
+      "projectUniqueName": "C:\\Users\\a.bozorgmehr\\Source\\Repos\\BluminEngine9\\BluminEngine9\\BluminEngine9.csproj",
       "projectName": "BluminEngine9",
-      "projectPath": "D:\\Visual studio 2022 projects\\BluminEngine9\\BluminEngine9\\BluminEngine9.csproj",
-      "packagesPath": "C:\\Users\\arad8\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual studio 2022 projects\\BluminEngine9\\BluminEngine9\\obj\\",
+      "projectPath": "C:\\Users\\a.bozorgmehr\\Source\\Repos\\BluminEngine9\\BluminEngine9\\BluminEngine9.csproj",
+      "packagesPath": "C:\\Users\\a.bozorgmehr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\a.bozorgmehr\\Source\\Repos\\BluminEngine9\\BluminEngine9\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\arad8\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\a.bozorgmehr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1263,7 +1258,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1327,7 +1321,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   },
