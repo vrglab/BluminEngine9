@@ -1,6 +1,7 @@
 ﻿
 using Google.Api;
 using OpenTK.Core.Exceptions;
+using OpenTK.Graphics.OpenGL;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using System.Text.Json.Serialization;
 
@@ -19,7 +20,6 @@ namespace BluminEngine9.Rendering
         public unsafe Display(Resolution res, string name, WindowStyle style)
         {
             Style = style;
-            currentResolution = res;
 
             switch (style)
             {
@@ -37,8 +37,17 @@ namespace BluminEngine9.Rendering
             }
             
             window = GLFW.CreateWindow(res.Width, res.Heigth, name, curentMonitor, window);
+            Application.init(window);
+            SetWindowResolution(res);
             GLFW.MakeContextCurrent(window);
             GLFW.FocusWindow(window);
+        }
+
+        public void SetWindowResolution(Resolution res)
+        {
+            currentResolution = res;
+            GLFW.SetWindowSize(window, res.Width, res.Heigth);
+            GL.Viewport(0, 0, res.Width, res.Heigth);
         }
     }
 
@@ -53,6 +62,16 @@ namespace BluminEngine9.Rendering
         {
             Width = width;
             Heigth = heigth;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string? ToString()
+        {
+            return Width.ToString() + ":" + Heigth.ToString();
         }
     }
 

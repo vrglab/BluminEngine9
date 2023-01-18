@@ -44,8 +44,15 @@ namespace BluminEngine9
 
                 display = new Display(res, name, style);
 
-                init(display.window);
-                GL.Viewport(0, 0, display.currentResolution.Width, display.currentResolution.Heigth);
+                
+                
+
+                GLFW.SetWindowSizeCallback(display.window, (Window* window, int width, int height) =>
+                {
+                    var res = new Resolution(width, height);
+                    Debug.Log("Changed res to: " + res);
+                    display.SetWindowResolution(res);
+                });
 
                 Debug.Log("Batching Assets");
                 ResourceMannager.BatchLoadedFiles();
@@ -74,7 +81,7 @@ namespace BluminEngine9
         }
 
 
-        private static void InitializeGlBindings()
+        public static void InitializeGlBindings()
         {
             Assembly assembly;
             try
@@ -108,7 +115,7 @@ namespace BluminEngine9
             LoadBindings("OpenGL4");
         }
 
-        unsafe static void init(Window* window)
+        public unsafe static void init(Window* window)
         {
             GLFW.WindowHint(WindowHintClientApi.ClientApi, ClientApi.OpenGlApi);
             GLFWGraphicsContext Context = new GLFWGraphicsContext(window);
