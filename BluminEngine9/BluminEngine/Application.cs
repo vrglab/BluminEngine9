@@ -44,14 +44,16 @@ namespace BluminEngine9
 
                 display = new Display(res, name, style);
 
-                
-                
+                init(display.window);
 
-                GLFW.SetWindowSizeCallback(display.window, (Window* window, int width, int height) =>
+                //set the viewport
+                GL.Viewport(0, 0, display.currentResolution.Width, display.currentResolution.Heigth);
+
+                //set the viewport callback
+                GLFW.SetWindowSizeCallback(display.window, (Window* win, int h,int w) =>
                 {
-                    var res = new Resolution(width, height);
-                    Debug.Log("Changed res to: " + res);
-                    display.SetWindowResolution(res);
+                    display.currentResolution = new Resolution(w, h);
+                    GL.Viewport(0, 0, display.currentResolution.Width, display.currentResolution.Heigth);
                 });
 
                 Debug.Log("Batching Assets");

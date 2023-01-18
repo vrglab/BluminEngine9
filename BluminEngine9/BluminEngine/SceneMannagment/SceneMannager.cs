@@ -1,4 +1,5 @@
-﻿using BluminEngine9.Objects;
+﻿using BluminEngine9.BluminEngine.Objects.Componants;
+using BluminEngine9.Objects;
 using BluminEngine9.Utilities.EventSystem;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace BluminEngine9.SceneMannagment
     public abstract class Scene : Instancable, IEngineActor
     {
         protected Dictionary<Guid, GameObject> RegisteredGameObjects = new Dictionary<Guid, GameObject>();
-
+        public Camera MainCammera { get; private set; }
 
         public BluminGlobalEvent AwakeEventCallback { get; } = new BluminGlobalEvent();
         public BluminGlobalEvent StartEventCallback { get; } = new BluminGlobalEvent();
@@ -48,7 +49,7 @@ namespace BluminEngine9.SceneMannagment
 
         protected Scene()
         {
-
+            MainCammera = RegisterGameObject(new CameraMainObj()).mainCamera;
             UpdateEventCallback.addListner(() =>
             {
                 foreach (var item in RegisteredGameObjects)
@@ -86,7 +87,7 @@ namespace BluminEngine9.SceneMannagment
             if(!RegisteredGameObjects.ContainsKey(objToRegister.GetInstanceId()))
             {
                 objToRegister.AwakeEvent.Invoke();
-                RegisteredGameObjects.Add(GetInstanceId(), objToRegister);
+                RegisteredGameObjects.Add(objToRegister.GetInstanceId(), objToRegister);
                 objToRegister.StartEvent.Invoke();
             }
             return objToRegister;
@@ -95,5 +96,22 @@ namespace BluminEngine9.SceneMannagment
         public abstract void Awake();
         public abstract void Start();
         public abstract void Update();
+
+        private class CameraMainObj : GameObject
+        {
+            public Camera mainCamera;
+            public override void Awake()
+            {
+                mainCamera = AddComponant<Camera>();
+            }
+
+            public override void Start()
+            {
+            }
+
+            public override void Update()
+            {
+            }
+        }
     }
 }

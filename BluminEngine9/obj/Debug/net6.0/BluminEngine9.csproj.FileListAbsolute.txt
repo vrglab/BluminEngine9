@@ -17,7 +17,6 @@ D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Micr
 D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
 D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Newtonsoft.Json.dll
-D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\ConfigParser.dll
 D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Silk.NET.Assimp.dll
 D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Silk.NET.Core.dll
 D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Silk.NET.Maths.dll
@@ -91,3 +90,5 @@ C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\obj\Debug\net6.0\
 C:\Users\a.bozorgmehr\source\repos\BluminEngine9\BluminEngine9\obj\Debug\net6.0\ref\BluminEngine9.dll
 C:\Users\a.bozorgmehr\Source\Repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Google.Api.CommonProtos.dll
 C:\Users\a.bozorgmehr\Source\Repos\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Google.Protobuf.dll
+D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Google.Api.CommonProtos.dll
+D:\Visual studio 2022 projects\BluminEngine9\BluminEngine9\bin\Debug\net6.0\Google.Protobuf.dll

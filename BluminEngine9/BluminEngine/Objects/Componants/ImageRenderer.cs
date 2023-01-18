@@ -13,11 +13,11 @@ namespace BluminEngine9.Objects.Componants
         public Image image { get; set; }
         public IShader shader { get; set; }
 
-        VertexArrayBuffer<int> ObjectBuffer { get; set; }
+        VertexArrayBuffer<float> ObjectBuffer { get; set; }
 
         public override void Awake()
         {
-          
+
         }
 
         public override void OnDestroy()
@@ -27,8 +27,8 @@ namespace BluminEngine9.Objects.Componants
 
         public override void OnRender()
         {
+            GL.EnableVertexAttribArray(0);
             shader.Run();
-
             GL.ActiveTexture(TextureUnit.Texture0);
             GL.BindTexture(TextureTarget.Texture2D, image.TextureId);
             shader.SetUniform("guiTexture", 0);
@@ -36,27 +36,27 @@ namespace BluminEngine9.Objects.Componants
             shader.SetUniform("transformationMatrix", Matrix.transform(gameobject.transform));
 
             GL.BindVertexArray(ObjectBuffer.BufferID);
-            GL.DrawArrays(PrimitiveType.TriangleStrip, 0, 3);
+            GL.DrawArrays(PrimitiveType.TriangleStrip, 0, ObjectBuffer.Length);
         }
 
         public override void Start()
         {
             var arrayData = new Vector2[] {
                 new Vector2(-1f, 1f),
-                new Vector2(-1f, -1f) ,
-                new Vector2(1f, 1f) ,
-                new Vector2(1f, -1f) 
+                new Vector2(-1f, -1f),
+                new Vector2(1f, 1f),
+                new Vector2(1f, -1f)
             };
 
-            int[] positionData = new int[arrayData.Length * 2];
+            float[] positionData = new float[arrayData.Length * 2];
 
             for (int i = 0; i < arrayData.Length; ++i)
             {
-                positionData[i * 2] = (int)arrayData[i].x;
-                positionData[i * 2 + 1] = (int)arrayData[i].y;
+                positionData[i * 2] = arrayData[i].x;
+                positionData[i * 2 + 1] = arrayData[i].y;
             }
 
-            ObjectBuffer = new VertexArrayBuffer<int>(positionData, BufferTarget.ArrayBuffer, BufferUsageHint.StaticDraw);
+            ObjectBuffer = new VertexArrayBuffer<float>(positionData, BufferTarget.ArrayBuffer, BufferUsageHint.StreamDraw);
 
             Debug.LogBuffer("Vertex array", ObjectBuffer);
         }

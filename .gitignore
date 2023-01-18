@@ -2,4 +2,5 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/BluminEngine9/FileContentIndex
+\.vs\
+\BluminEngine9\obj\
